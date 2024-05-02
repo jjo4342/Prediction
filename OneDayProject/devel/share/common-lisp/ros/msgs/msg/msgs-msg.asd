@@ -1,0 +1,21 @@
+
+(cl:in-package :asdf)
+
+(defsystem "msgs-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils )
+  :components ((:file "_package")
+    (:file "dataset_array_msg" :depends-on ("_package_dataset_array_msg"))
+    (:file "_package_dataset_array_msg" :depends-on ("_package"))
+    (:file "dataset_msg" :depends-on ("_package_dataset_msg"))
+    (:file "_package_dataset_msg" :depends-on ("_package"))
+    (:file "map_array_msg" :depends-on ("_package_map_array_msg"))
+    (:file "_package_map_array_msg" :depends-on ("_package"))
+    (:file "map_msg" :depends-on ("_package_map_msg"))
+    (:file "_package_map_msg" :depends-on ("_package"))
+    (:file "object_array_msg" :depends-on ("_package_object_array_msg"))
+    (:file "_package_object_array_msg" :depends-on ("_package"))
+    (:file "object_msg" :depends-on ("_package_object_msg"))
+    (:file "_package_object_msg" :depends-on ("_package"))
+    (:file "point_msg" :depends-on ("_package_point_msg"))
+    (:file "_package_point_msg" :depends-on ("_package"))
+  ))
